@@ -31,7 +31,7 @@ const EditPost = (props) => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className='createPost'>
-                    <h3 className='createPostElement'>Create Post</h3>
+                    <h3 className='createPostElement'>Edit Post</h3>
                 </div>
                 <textarea className='titleTextArea' name='title'
                     value={inputs.title || ""}

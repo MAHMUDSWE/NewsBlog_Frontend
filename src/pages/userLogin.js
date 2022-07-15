@@ -74,14 +74,14 @@ const UserLogin = () => {
                             {isLoggedIn ? <Navigate to="/news_feed" replace /> : <h3> </h3>}
                         </div>
 
-                        <button>Log in</button>
+                        <button className='editPostButton'>Log in</button>
 
                     </div> <br />
                 </form>
 
                 <div className='loginStyle'>
                     <h3>Create New Account</h3>
-                    <Link to="/signup" ><button>Sign up</button></Link>  
+                    <Link to="/signup" ><button className='editPostButton'>Sign up</button></Link>  
 
                 </div>
 

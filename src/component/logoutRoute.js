@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 
 export default function LogoutRoute() {
     // let [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn"));
-    let isLoggedIn = localStorage.getItem("isLoggedIn")
+    let isLoggedIn = localStorage.getItem("isLoggedIn");
 
     return (
         <div>

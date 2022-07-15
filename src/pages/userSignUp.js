@@ -100,13 +100,13 @@ function UserSignUp() {
 
                             <div className='loginStyle'>
                                 {message ? <h3>{message}</h3> : <h3>{message}</h3>}
-                                <button>Sign up</button>
+                                <button className='editPostButton'>Sign up</button>
                             </div> <br />
                         </form>
 
                         <div className='loginStyle'>
                             <h3>Already have an Account?</h3>
-                            <Link to="/login" ><button>Log in</button></Link>
+                            <Link to="/login" ><button className='editPostButton'>Log in</button></Link>
 
                         </div>
 

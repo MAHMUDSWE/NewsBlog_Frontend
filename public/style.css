@@ -137,17 +137,17 @@ body {
     box-shadow: 2px 2px 2px black;
 }
 .postButton{
-    background-color: white; 
-    color: black; 
+    background-color: #037bfc; 
+    color: white; 
     border: none;
-    padding: 4px 8px;
+    padding: 6px 6px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border: 2px solid #f44336;
+    
     border-radius: 3px;
 }
 
@@ -172,7 +172,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 8px;
+    margin: 4px 2px;
     cursor: pointer;
     border: 2px solid black;
     box-shadow: 2px 2px 2px black;

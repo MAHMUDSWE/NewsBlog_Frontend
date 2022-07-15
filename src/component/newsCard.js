@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DeletePost from "./deletePost";
 import EditPost from "./editPost";
 
 function NewsFeedCard(props) {
@@ -17,7 +18,7 @@ function NewsFeedCard(props) {
 
 function ProfileFeedCard(props) {
 
-    const {newsBlogId, newsTitle, newsContent } = props;
+    const { newsBlogId, newsTitle, newsContent } = props;
 
     const [openEditPost, setOpenEditPost] = useState(false);
     const [openDeletePost, setOpenDeletePost] = useState(false);
@@ -40,8 +41,9 @@ function ProfileFeedCard(props) {
             <div className='cardDesc'>
                 <p >{newsContent}</p>
             </div>
-            {openEditPost && <EditPost newsBlogId={newsBlogId} newsTitle={newsTitle} newsContent={newsContent}/>}
-            <button onClick={handleEdit} className="editPostButton">Edit Post</button> 
+            {openEditPost && <EditPost newsBlogId={newsBlogId} newsTitle={newsTitle} newsContent={newsContent} />}
+            {openDeletePost && <DeletePost newsBlogId={newsBlogId} />}
+            <button onClick={handleEdit} className="editPostButton">Edit Post</button>
             <button onClick={handleDelete} className="deletePostButton">Delete</button>
 
         </div>

@@ -41,7 +41,7 @@ const CreatePost = () => {
                     onChange={handleChange}
                     placeholder="What's on your mind?" /> <br />
 
-                <button className='postButton'>Post</button>
+                <button className='postButton'>POST</button>
             </form>
         </div>
     )
