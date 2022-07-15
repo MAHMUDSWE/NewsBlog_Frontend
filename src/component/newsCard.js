@@ -1,13 +1,15 @@
+import { useState } from "react";
+import EditPost from "./editPost";
 
 function NewsFeedCard(props) {
 
-    const {author, newsTitle, newsContent} = props;
+    const { author, newsTitle, newsContent } = props;
     return (
         <div className='card'>
 
             <h3 className='cardTitle'>{newsTitle}</h3>
             <p className='cardDesc'>{newsContent}</p>
-            <p style={{color: "blue"}}>Author: {author}</p>
+            <p style={{ color: "blue" }}>Author: {author}</p>
         </div>
     )
 
@@ -15,13 +17,33 @@ function NewsFeedCard(props) {
 
 function ProfileFeedCard(props) {
 
-    const {newsTitle, newsContent} = props;
+    const {newsBlogId, newsTitle, newsContent } = props;
+
+    const [openEditPost, setOpenEditPost] = useState(false);
+    const [openDeletePost, setOpenDeletePost] = useState(false);
+
+    const handleEdit = () => {
+        console.log("Button is Clicked");
+        setOpenEditPost(true);
+    }
+    const handleDelete = () => {
+        console.log("Button is Clicked");
+        setOpenDeletePost(true);
+    }
+
     return (
         <div className='card'>
 
-            <h3 className='cardTitle'>{newsTitle}</h3>
-            <p className='cardDesc'>{newsContent}</p>
-            
+            <div className='cardTitle'>
+                <h3 >{newsTitle}</h3>
+            </div>
+            <div className='cardDesc'>
+                <p >{newsContent}</p>
+            </div>
+            {openEditPost && <EditPost newsBlogId={newsBlogId} newsTitle={newsTitle} newsContent={newsContent}/>}
+            <button onClick={handleEdit} className="editPostButton">Edit Post</button> 
+            <button onClick={handleDelete} className="deletePostButton">Delete</button>
+
         </div>
     )
 

@@ -13,7 +13,7 @@ export default function LogoutRoute() {
             {
                 localStorage.removeItem("access_token")
             }
-            {isLoggedIn ? <Navigate to="/" replace /> : <h3> </h3>}
+            {isLoggedIn ? <Navigate to="/login" replace /> : <h3> </h3>}
         </div>
     )
 }
