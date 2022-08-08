@@ -1,0 +1,60 @@
+
+.newsCard-Container{
+    border-top: 1px solid #F7F7F7;
+    padding: 8px 16px;
+    border-collapse: collapse;
+}
+
+.newsCard-Container:hover{
+    background-color: #F7F7F7;
+}
+
+.newsCard-Container .title-author {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.newsCard-Container .newsButtons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20%;
+}
+.newsCard-Container .newsButtons button{
+    margin-right: 10px;
+    background-color: #037BFC;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 2px;
+}
+
+.Profile-newsCard-Container{
+    border: 1px solid #F7F7F7;
+    padding: 8px 16px;
+    border-collapse: collapse;
+}
+
+.Profile-newsCard-Container .title-time{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Profile-newsCard-Container:hover{
+    background-color: #F7F7F7;
+}
+
+.Profile-newsCard-Container .newsButtons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20%;
+}
+
+.Profile-newsCard-Container .newsButtons .like-repost-share button{
+    margin-right: 10px;
+    background-color: #037BFC;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 2px;
+}

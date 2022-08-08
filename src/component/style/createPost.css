@@ -1,0 +1,28 @@
+.createPost-Container{
+    border: 1px solid #F7F7F7;
+    padding-left: 8px;
+}
+
+.createPost{
+    background-color: #037bfc;
+    color: white;
+    width: 105px;
+}
+.createPost h3{
+    padding: 2px 4px;
+}
+
+.createPost-Container .postButton{
+    background-color: #037bfc; 
+    color: white; 
+    border: none;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+    border-radius: 3px;
+}

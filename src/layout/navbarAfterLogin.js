@@ -1,14 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import newsBlogLogo from '../asset/logo.png'
+import './navbar.css'
 
 function NavbarAfterLogin() {
+
     return (
-        <div className='nav'>
-            <nav >
-                <li><Link to="/news_feed" className='nav-li-link'>News Feed</Link></li>
-                <li><Link to="/profile" className='nav-li-link'>Profile</Link></li>
-                <li><Link to="/logout" className='nav-li-link'>Log out</Link></li>
-            </nav>
+        <div className='container container-flex'>
+
+            <div className='logoDiv'>
+                <img src={newsBlogLogo} width='150px' height="80px" alt="logo" />
+            </div>
+
+            <div className='navDiv'>
+                <nav className=''>
+                    <NavLink to="/news_feed"
+                        className={({ isActive }) => isActive ? "activeItem" : "nav-li-link"}>News Feed</NavLink>
+
+                    <NavLink to="/profile"
+                        className={({ isActive }) => isActive ? "activeItem" : "nav-li-link"}>Profile</NavLink>
+
+                    <NavLink to="/logout"
+                        className={({ isActive }) => isActive ? "activeItem" : "nav-li-link"} >Log out</NavLink>
+                </nav>
+            </div>
+            <div>
+
+            </div>
+
         </div>
     )
 }

@@ -1,29 +1,76 @@
-nav{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+:root{
+    --mainColor: purple;
+}
+header{
+    background-color: var(--mainColor);
+}
+
+.container{
+    margin: 0 0;
+    padding: 0 5px;
     background-color: #777;
+    font-size: 1.5rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.container-flex{
     display: flex;
+    
+    align-items: center;
+}
+.logoDiv{
+    width: 25%;
+    margin: 0 10px;
+    text-align: center;
+    color: wheat;
+}
+.navDiv{
+    width: 50%;
+    margin: 0 10px;
+    text-align: center;
+}
+.nav{
+    list-style-type: none;
+    /* margin: 0;
+    padding: 0;
+    overflow: hidden; */
+    background-color: greenyellow;
+    /* display: flex; */
     justify-content: center;
 }
 
-.nav-li{
+/* .nav-li{
     float: left;
-}
+} */
 
 .nav-li-link{
-    display: inline-block;
-    color: white;
+    /* display: inline-block; */
+    color: wheat;
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
 
-.nav-li-link:hover{
-    background-color: #222;
-}
-.nav-li-link:active{
+/* .nav-li-link:active{
     background-color: red;
+} */
+
+.activeItem{
+    /* display: inline-block; */
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
 }
 
+.nav-li-link:hover{
+    /* background-color: #222; */
+    color: #222;
+}
+
+.activeItem:hover{
+    /* background-color: #222; */
+    color: #222;
+}

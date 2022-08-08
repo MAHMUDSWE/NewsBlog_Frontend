@@ -27,7 +27,7 @@ function ProfilefeedRoute() {
 
     return (
 
-        <div>
+        <div >
             {(typeof backEndData === 'undefined' || message) ? (
                 <h3 style={{ color: "red", textAlign: "center" }}>{message}!</h3>
             ) :

@@ -28,11 +28,11 @@ const EditPost = (props) => {
     }
 
     return (
-        <div>
+        <div style={{border:"1px solid gray", borderRadius:"5px", padding:"5px"}}>
             <form onSubmit={handleSubmit}>
-                <div className='createPost'>
+                {/* <div className='createPost'>
                     <h3 className='createPostElement'>Edit Post</h3>
-                </div>
+                </div> */}
                 <textarea className='titleTextArea' name='title'
                     value={inputs.title || ""}
                     onChange={handleChange}
@@ -42,7 +42,7 @@ const EditPost = (props) => {
                     onChange={handleChange}
                     placeholder="What's on your mind?" /> <br />
 
-                <button className='postButton'>Update</button>
+                <button className='postButton'>Update Post</button>
             </form>
         </div>
     )

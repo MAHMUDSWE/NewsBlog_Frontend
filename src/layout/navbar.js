@@ -1,15 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import newsBlogLogo from '../asset/logo.png'
+import "./navbar.css"
 
 function Navbar() {
     return (
-        <div className='nav'>
-            <nav >
-                <li><Link to="/" className='nav-li-link'>Home</Link></li>
-                <li><Link to="/login" className='nav-li-link'>Log in</Link></li>
-                <li><Link to="/signup" className='nav-li-link'>Sign up</Link></li>
-            </nav>
+        <div className='container container-flex'>
+
+            <div className='logoDiv'>
+            <img src={newsBlogLogo} width='150px' height="80px" alt="logo" />
+            </div>
+
+            <div className='navDiv'>
+                <nav className=''>
+                    <NavLink to="/"
+                        className={({ isActive }) => isActive ? "activeItem" : "nav-li-link"}>Home</NavLink>
+
+                    <NavLink to="/login"
+                        className={({ isActive }) => isActive ? "activeItem" : "nav-li-link"}>Log in</NavLink>
+
+                    <NavLink to="/signup"
+                        className={({ isActive }) => isActive ? "activeItem" : "nav-li-link"} >Sign up</NavLink>
+                </nav>
+            </div>
+            <div>
+
+            </div>
+
         </div>
+        
     )
 }
 

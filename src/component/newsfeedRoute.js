@@ -26,7 +26,7 @@ function NewsfeedRoute() {
     }, [])
 
     return (
-        <div style={{ margin: "0 25% 0 25%" }}>
+        <div >
             {(typeof backEndData === 'undefined' || message) ? (
                 <h3 style={{ color: "red", textAlign: "center" }}>{message}!</h3>
             ) :

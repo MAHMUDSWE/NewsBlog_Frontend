@@ -1,45 +1,54 @@
 import React, { useState } from 'react'
 import Navbar from '../layout/navbar';
-import axios from 'axios';
-import { Navigate, Link } from 'react-router-dom';
+// import axios from 'axios';
+// import { Navigate, Link } from 'react-router-dom';
+import Footer from '../layout/footer';
+import Login from '../component/login';
 
 const UserLogin = () => {
-    const [inputs, setInputs] = useState({});
-    let [message, setMessage] = useState("");
-    let [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn"));
+    // const [inputs, setInputs] = useState({});
+    // let [message, setMessage] = useState("");
+    // let [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn"));
 
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value }))
-    }
+    // const handleChange = (event) => {
+    //     const name = event.target.name;
+    //     const value = event.target.value;
+    //     setInputs(values => ({ ...values, [name]: value }))
+    // }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
 
-        axios.post("/userLogin", {
-            username: inputs.username,
-            password: inputs.password
-        })
-            .then(res => {
-                return res.data;
-            })
-            .then(data => {
-                localStorage.setItem("access_token", data.access_token);
-                setMessage(data.message);
-                localStorage.setItem("isLoggedIn", "true");
-                setIsLoggedIn(localStorage.getItem("isLoggedIn"));
-            })
-            .catch(error => {
-                if (error.response.status === 401) {
-                    setMessage(error.response.data.message);
-                }
-            })
-    }
+    //     axios.post("/userLogin", {
+    //         username: inputs.username,
+    //         password: inputs.password
+    //     })
+    //         .then(res => {
+    //             return res.data;
+    //         })
+    //         .then(data => {
+    //             localStorage.setItem("access_token", data.access_token);
+    //             setMessage(data.message);
+    //             localStorage.setItem("isLoggedIn", "true");
+    //             setIsLoggedIn(localStorage.getItem("isLoggedIn"));
+    //         })
+    //         .catch(error => {
+    //             if (error.response.status === 401) {
+    //                 setMessage(error.response.data.message);
+    //             }
+    //             else {
+    //                 setMessage("Internal Server Error!");
+    //             }
+
+    //         })
+    // }
     return (
-        <div>
-            <Navbar />
+        <div >
+            <div className='navBar'>
+                <Navbar />
+            </div>
 
+            {/* 
             <div className='formDiv'>
                 <h3 className='loginStyle'>Login Form</h3>
 
@@ -70,21 +79,29 @@ const UserLogin = () => {
                     <div className='loginStyle'>
 
                         <div>
-                            {message? <h3>{message}</h3> : <h3>{message}</h3>}
+                            {message ? <h3 style={{ color: "red" }}>{message}</h3> : <h3>{message}</h3>}
                             {isLoggedIn ? <Navigate to="/news_feed" replace /> : <h3> </h3>}
                         </div>
 
                         <button className='editPostButton'>Log in</button>
 
-                    </div> <br />
+                    </div>
                 </form>
 
                 <div className='loginStyle'>
                     <h3>Create New Account</h3>
-                    <Link to="/signup" ><button className='editPostButton'>Sign up</button></Link>  
+                    <Link to="/signup" ><button className='editPostButton'>Sign up</button></Link>
 
                 </div>
 
+            </div> */}
+            
+            <div>
+                <Login />
+            </div>
+
+            <div>
+                <Footer />
             </div>
         </div>
     )

@@ -1,45 +1,47 @@
 import React, { useState } from 'react'
 import Navbar from '../layout/navbar'
-import { Link } from 'react-router-dom';
-import axios from "axios"
+// import { Link } from 'react-router-dom';
+// import axios from "axios"
+import Footer from '../layout/footer';
+import Signup from '../component/signup';
 
 function UserSignUp() {
 
-    const [inputs, setInputs] = useState({});
-    let [message, setMessage] = useState("");
-    let [isSignupSuccess, setIsSignupSuccess] = useState("");
+    // const [inputs, setInputs] = useState({});
+    // let [message, setMessage] = useState("");
+    // let [isSignupSuccess, setIsSignupSuccess] = useState("");
 
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value }))
-    }
+    // const handleChange = (event) => {
+    //     const name = event.target.name;
+    //     const value = event.target.value;
+    //     setInputs(values => ({ ...values, [name]: value }))
+    // }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
 
-        axios.post("/userRegistration", inputs)
-            .then(res => res.data)
-            .then(data => {
-                console.log(data);
-                setMessage(data.success);
-                setIsSignupSuccess(true);
-            })
-            .catch(error => {
-                if (error.response.status === 409) {
-                    setMessage(error.response.data.message);
-                }
-                else if (error.response.status === 400) {
-                    setMessage(error.response.data.message);
-                }
-            });
+    //     axios.post("/userRegistration", inputs)
+    //         .then(res => res.data)
+    //         .then(data => {
+    //             console.log(data);
+    //             setMessage(data.success);
+    //             setIsSignupSuccess(true);
+    //         })
+    //         .catch(error => {
+    //             if (error.response.status === 409) {
+    //                 setMessage(error.response.data.message);
+    //             }
+    //             else if (error.response.status === 400) {
+    //                 setMessage(error.response.data.message);
+    //             }
+    //         });
 
-    }
+    // }
 
     return (
         <div>
             <Navbar />
-            {
+            {/* {
                 isSignupSuccess ? (<div>
                     {message ? <h3>{message}</h3> : <h3>{message}</h3>}
                     <Link to='/login'><button>Log in</button></Link>
@@ -112,7 +114,13 @@ function UserSignUp() {
 
                     </div>
                 )
-            }
+            } */}
+            <div>
+                <Signup />
+            </div>
+            <div>
+                <Footer />
+            </div>
 
         </div>
     )
