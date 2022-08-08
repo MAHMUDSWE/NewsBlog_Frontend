@@ -5,15 +5,25 @@ reactjs, nodejs, expressjs and mysql
 https://github.com/MAHMUDSWE/newsBlogCRUD
 
 
-# Getting Started with Create React App
+# Getting Started with React App
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Run the app, 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Profile Page
+# Sign up Page
+![Screenshot (465)](https://user-images.githubusercontent.com/61628453/183426725-5500551a-3e84-4ea0-9c84-2a18b6335e7c.png)
 
-![profilepage](https://user-images.githubusercontent.com/61628453/179326788-164fa69e-7661-4ed1-b395-6c334142ba27.png)
+# Log in Page
+![Screenshot (470)](https://user-images.githubusercontent.com/61628453/183426735-a0ca6a0f-d909-4918-ac8d-f7aa55d08208.png)
+
+# NewsFeed Page
+![Screenshot (471)](https://user-images.githubusercontent.com/61628453/183427336-9797a7fe-0362-45ce-8cf4-95a6cd284772.png)
+
+# Demo video
+https://user-images.githubusercontent.com/61628453/183427123-fb3db267-08bd-49fa-97e0-f39e12106ff0.mp4
+
+
