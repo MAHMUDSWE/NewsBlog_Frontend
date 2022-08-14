@@ -27,11 +27,11 @@ const DeletePost = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <div className='createPost'>
+                {/* <div className='createPost'>
                     <h3 className='createPostElement'>Delete Post</h3>
-                </div>
+                </div> */}
 
-                <button className='deletePostButton'>Confirm Delete</button>
+                <button className='deletePostButton'>Confirm</button>
             </form>
         </div>
     )

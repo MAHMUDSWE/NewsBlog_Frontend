@@ -31,7 +31,11 @@ function NewsfeedRoute() {
                 <h3 style={{ color: "red", textAlign: "center" }}>{message}!</h3>
             ) :
                 (
-                    backEndData.map((post, i) => <NewsFeedCard key={i} author={post.name} newsTitle={post.title} newsContent={post.content} />)
+                    backEndData.map((post, i) => <NewsFeedCard key={i}
+                     author={post.name}
+                      newsTitle={post.title}
+                       newsContent={post.content}
+                       newsCreateTime={post.createtime} />)
                 )
             }
             {

@@ -2,14 +2,20 @@
 .newsFeed-div {
     display: flex;
     margin-left: 10px;
-
 }
 
 .newsFeed-div .leftMenu {
     width: 20%;
     padding: 10px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px 10px 10px 10px;
+    background-color: white;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 85px;
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 /* .leftMenu {
@@ -31,7 +37,6 @@
     list-style-type: none;
     margin: 0;
     padding: 5px;
-
 }
 
 .leftMenu ul a {
@@ -42,7 +47,6 @@
     text-decoration: none;
     color: #666;
     font-size: large;
-
 }
 
 .leftMenu li a:hover {
@@ -55,25 +59,43 @@
     color: white;
 }
 
-.leftMenu {
+/* .leftMenu {
     float: left;
     padding: 15px;
-}
+} */
 
 .newsFeed-div .rightMenu {
+
     width: 25%;
-    padding: 5px;
+    /* padding: 5px; */
     /* box-shadow: 2px 4px 4px gray; */
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px 0 0 25px;
     overflow: hidden;
     text-align: center;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 85px;
+    right: 10px;
+    
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.rightMenu .search-container{
+   background-color: white;
+   border: 2px solid white;
+   border-radius: 5px;
+   box-sizing: border-box;
+   /* padding-bottom: 20px; */
+
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .rightMenu input[type=text] {
     background-color: #EFF3F4;
     padding: 14px;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 17px;
     border: none;
     border: 2px solid #EFF3F4;
@@ -82,7 +104,8 @@
 
 .rightMenu .search-container button {
     padding: 14px;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-right: 8px;
     background: #EFF3F4;
     font-size: 17px;
@@ -98,12 +121,15 @@
 }
 
 .rightMenu .trending-container{
-    margin-top: 10px;
-    background-color: #EFF3F4;
-    border: 2px solid #EFF3F4;
+    margin-top: 15px;
+    background-color: white;
+    border: 2px solid white;
     padding: 8px 0;
     border-radius: 5px;
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
+
 .trending-container h3{
     text-align: left;
     font-size: 20px;
@@ -114,8 +140,8 @@
 .rightMenu .trending-container .trending-contents{
     text-align: left;
     border-radius: 5px;
-
 }
+
 .trending-content {
     width: 100%;
     margin: 8px 0;
@@ -131,12 +157,11 @@
 
 
 .newsFeed-div .contentMenu {
-    background-color: white;
-    border: 2px solid #F7F9F9;
+    /* border: 2px solid #F7F9F9; */
     width: 50%;
     /* padding: 20px; */
-    border-radius: 5px;
-    margin: 20px;
+    /* border-radius: 5px; */
+    margin: 10px 20px 10px 22.6%;
     float: left;
     border-collapse: collapse;
 }
@@ -144,6 +169,11 @@
 .contentMenu .numberOfBlogs{
     text-align: center;
     color: #008CBA;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .newsFeed-div .contentMenuClearfix::after {
     content: "";

@@ -58,30 +58,6 @@ body {
 }
 
 
-.titleTextArea {
-    width: 40%;
-    height: 50px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
-}
-.contentTextArea {
-    width: 70%;
-    height: 120px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
-}
-
-
 .editProfileButton{
     background-color: white; 
     color: black; 
@@ -257,7 +233,10 @@ body {
     border-radius: 3px;
 }
 
-
+.right-section{
+    margin: 0;
+    padding: 0;
+}
 
 
 .sidebar-title 

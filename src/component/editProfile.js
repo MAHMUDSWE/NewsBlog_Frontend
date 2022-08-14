@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import axios from "axios"
 
+import "./style/editProfile.css"
+
 const EditProfile = (props) => {
     const { userid, name, email } = props;
     const [inputs, setInputs] = useState({ userid: userid, name: name, email: email });
@@ -28,7 +30,8 @@ const EditProfile = (props) => {
     }
 
     return (
-        <div style={{border:"1px solid gray", borderRadius:"5px", padding:"5px"}}>
+
+        <div className='editProfile-container'>
             <form onSubmit={handleSubmit}>
                 {/* <div className='createPost'>
                     <h3 className='createPostElement'>Edit Profile</h3>

@@ -21,7 +21,14 @@ const Profile = () => {
             <CreatePost />
           </div>
 
-          <h3>Your Post</h3>
+          <div className='yourPost'>
+            <div>
+              <h2>Your Posts</h2>
+            </div>
+            <div>
+              <button><h3>Filters</h3></button>
+            </div>
+          </div>
 
           <div>
             <ProfilefeedRoute />
@@ -32,7 +39,7 @@ const Profile = () => {
           <div class="right-section">
             <div>
               <div class="sidebar-title">
-                <h4>Events</h4>
+                <h4>Created Events</h4>
                 <a target="_blank" rel="noopener noreferrer" href="https://mahmudsust.netlify.app/">See All</a>
               </div>
 
@@ -57,7 +64,7 @@ const Profile = () => {
                   <h4>Social Media</h4>
 
                   <p><i class="fa-solid fa-location-dot"></i>   Willson Tech Park</p>
-                  <a  target="_blank" rel="noopener noreferrer" href="https://mahmudsust.netlify.app/">More Info</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://mahmudsust.netlify.app/">More Info</a>
                 </div>
               </div>
 
@@ -68,6 +75,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   )

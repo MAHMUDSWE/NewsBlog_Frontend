@@ -17,8 +17,8 @@ function Home() {
           <div>
             <button id='homeButton' type='button'>
               <span id='homeSpan'></span>Read Blog</button>
-            <button id='homeButton' type='button'>
-              <span id='homeSpan'></span>Learn More</button>
+            {/* <button id='homeButton' type='button'>
+              <span id='homeSpan'></span>Learn More</button> */}
           </div>
         </div>
         

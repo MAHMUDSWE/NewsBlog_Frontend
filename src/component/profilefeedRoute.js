@@ -32,7 +32,11 @@ function ProfilefeedRoute() {
                 <h3 style={{ color: "red", textAlign: "center" }}>{message}!</h3>
             ) :
                 (
-                    backEndData.map((post, i) => <ProfileFeedCard key={i} newsBlogId={post.blogid} newsTitle={post.title} newsContent={post.content} />)
+                    backEndData.map((post, i) => <ProfileFeedCard key={i}
+                        newsBlogId={post.blogid}
+                        newsTitle={post.title}
+                        newsContent={post.content}
+                        newsCreateTime={post.createtime} />)
                 )
             }
             {

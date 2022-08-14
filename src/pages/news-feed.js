@@ -5,7 +5,26 @@ import "./style/news-feed.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
+import CreatePost from '../component/createPost';
+
 function NewsFeed() {
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div >
       <NavbarAfterLogin />
@@ -27,8 +46,36 @@ function NewsFeed() {
         </div>
 
         <div className='contentMenu contentMenuClearfix'>
-          <h3 className='numberOfBlogs'>Showing ......... Blogs</h3>
-          <NewsfeedRoute />
+          <div className='createPost-container'>
+            <Button variant="outlined"
+              color="primary" onClick={handleClickOpen}>
+              Create New Post
+            </Button>
+            <Dialog open={open} onClose={handleClose}>
+              <DialogTitle>
+
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  <CreatePost />
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose} color="primary">
+                  Close
+                </Button>
+                {/* <Button onClick={handleClose} color="primary" autoFocus>
+                  Yes
+                </Button> */}
+              </DialogActions>
+            </Dialog>
+          </div>
+          <div>
+            <h3 className='numberOfBlogs'>Showing ......... Blogs on Local Politics</h3>
+          </div>
+          <div>
+            <NewsfeedRoute />
+          </div>
         </div>
 
         <div className='rightMenu'>
@@ -38,6 +85,7 @@ function NewsFeed() {
               <button type="submit"><FontAwesomeIcon icon={faSearch} /></button>
             </form>
           </div>
+
           <div className='trending-container'>
             <h3>Trending Blog for you</h3>
             <div className='trending-contents'>

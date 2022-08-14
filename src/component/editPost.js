@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import axios from "axios"
 
+import "./style/editPost.css"
+
 const EditPost = (props) => {
     const { newsBlogId, newsTitle, newsContent } = props;
     const [inputs, setInputs] = useState({ blogid: newsBlogId, title: newsTitle, content: newsContent });
@@ -28,7 +30,7 @@ const EditPost = (props) => {
     }
 
     return (
-        <div style={{border:"1px solid gray", borderRadius:"5px", padding:"5px"}}>
+        <div className='editPost-container'>
             <form onSubmit={handleSubmit}>
                 {/* <div className='createPost'>
                     <h3 className='createPostElement'>Edit Post</h3>

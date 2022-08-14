@@ -1,0 +1,42 @@
+
+
+.profileDetails-container .userDetails{
+    padding: 10px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.profileDetails-container .userPostDetails{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.profileDetails-container .userPostDetails .link{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.profileDetails-container .userPostDetails a{
+    text-decoration: none;
+}
+
+.profileDetails-container .userFriendDetails{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.profileDetails-container .userFriendDetails .link{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.profileDetails-container .userFriendDetails a{
+    text-decoration: none;
+}
